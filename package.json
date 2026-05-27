@@ -13,6 +13,9 @@
     "clean": "rm -rf docs/.vuepress/.cache docs/.vuepress/.temp docs/.vuepress/dist",
     "preview": "vuepress dev docs --host 0.0.0.0"
   },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.28",
     "@vuepress/plugin-feed": "2.0.0-rc.128",
