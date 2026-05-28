@@ -8,6 +8,7 @@
   display: none !important;
 }
 
+.codex-home-page .vp-hero-info-wrapper,
 .magazine-home .vp-hero-info-wrapper {
   min-height: 0 !important;
   padding: var(--space-8) var(--space-5) var(--space-7) !important;
@@ -33,13 +34,18 @@
   color: var(--ed-ink-faint);
 }
 
-.magazine-home .vp-hero-title {
+.magazine-home .vp-hero-title,
+.codex-home-page .vp-hero-title,
+.vp-page-hero .vp-hero-title,
+.vp-page-hero h1 {
   font-family: var(--ed-serif) !important;
   font-size: clamp(2.1rem, 5vw, 3rem) !important;
   font-weight: 600 !important;
   line-height: 1.12 !important;
   letter-spacing: -0.02em !important;
   color: var(--ed-ink) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--ed-ink) !important;
 }
 
 .magazine-home .vp-hero-description {
