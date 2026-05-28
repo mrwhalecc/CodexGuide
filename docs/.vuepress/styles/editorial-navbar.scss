@@ -44,9 +44,9 @@
 
 .vp-site-logo,
 .vp-navbar-brand img {
-  height: 1.75rem !important;
+  height: 1.5rem !important;
   width: auto !important;
-  max-width: 11rem;
+  max-width: 14rem;
 }
 
 /* Center links */
@@ -176,7 +176,8 @@ a.route-link.mw-nav-out {
   border-bottom: none !important;
 }
 
-.vp-nav-item.mw-nav-out > .route-link:hover {
+.vp-nav-item.mw-nav-out > .route-link:hover,
+a.route-link.mw-nav-out:hover {
   color: var(--ed-accent) !important;
 }
 
@@ -277,7 +278,8 @@ a.route-link.mw-nav-out {
     padding-right: var(--space-3);
   }
 
-  .vp-nav-item.mw-nav-out {
+  .vp-nav-item.mw-nav-out,
+  .vp-nav-item:has(> .mw-nav-out) {
     display: none;
   }
 }

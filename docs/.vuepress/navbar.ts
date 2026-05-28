@@ -1,20 +1,10 @@
 import { navbar } from "vuepress-theme-hope";
 
-import { MRWHALE_CONSOLE, MRWHALE_SITE } from "./mrwhale.js";
-
-/** 顶栏：少而清晰；教程/案例放下拉，避免 10+ 项挤在一行 */
+/** 顶栏 8 项：首页 · 学习路线 · 入口地图 · 配置 · 资源 · 教程 · 案例 · 接入 MrWhale */
 export default navbar([
   { text: "首页", link: "/" },
-  { text: "接入 MrWhale", link: "/mrwhale/", attrs: { class: "mw-nav-em" } },
-  {
-    text: "指南",
-    children: [
-      { text: "学习路线", link: "/guide/00-overview.md" },
-      { text: "入口地图", link: "/platform/" },
-      { text: "实践方法", link: "/practice/" },
-      { text: "官方资料", link: "/reference/" },
-    ],
-  },
+  { text: "学习路线", link: "/guide/00-overview.md" },
+  { text: "入口地图", link: "/platform/" },
   {
     text: "配置",
     children: [
@@ -23,6 +13,14 @@ export default navbar([
       { text: "config.toml", link: "/configuration/config-file.md" },
       { text: "MCP、Skills 与 Subagents", link: "/configuration/mcp-skills-subagents.md" },
       { text: "安全与审批", link: "/configuration/security-admin.md" },
+    ],
+  },
+  {
+    text: "资源",
+    children: [
+      { text: "实践方法", link: "/practice/" },
+      { text: "官方资料", link: "/reference/" },
+      { text: "开源致谢", link: "/about/attribution.md" },
     ],
   },
   {
@@ -67,15 +65,5 @@ export default navbar([
       { text: "参考致谢", link: "/recipes/credits.md" },
     ],
   },
-  { text: "开源致谢", link: "/about/attribution.md" },
-  {
-    text: "控制台",
-    link: MRWHALE_CONSOLE,
-    attrs: { class: "mw-nav-cta", rel: "noopener noreferrer" },
-  },
-  {
-    text: "mrwhale.ai",
-    link: MRWHALE_SITE,
-    attrs: { class: "mw-nav-out", target: "_blank", rel: "noopener noreferrer" },
-  },
+  { text: "接入 MrWhale", link: "/mrwhale/", attrs: { class: "mw-nav-em" } },
 ]);
