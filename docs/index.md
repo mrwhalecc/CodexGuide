@@ -1,23 +1,29 @@
 ---
 home: true
 icon: home
-title: CodexGuide
-description: "CodexGuide 系统整理 Codex 桌面 App、CLI、IDE、Cloud、Skills 与真实案例，帮助中文用户从入门到团队落地。"
+title: MrWhale Codex 指南
+description: "MrWhale Codex 指南：系统学习 Codex；API、Token 与按量计费请前往 mrwhale.ai。"
 pageClass: codex-home-page
-heroImage: /logo.svg
-heroText: CodexGuide
-tagline: 面向全球初学者、创作者、开发者与团队的 Codex 实践指南。从第一次上手，到把 Codex 接入真实工作流。
+heroImage: /mrwhale-logo.svg
+heroText: MrWhale Codex 指南
+tagline: 在 codex.mrwhale.ai 学完 Codex 怎么用；在 mrwhale.ai 完成 API 接入与 Token 配置。
 actions:
+  - text: 接入 MrWhale API
+    link: /mrwhale/
+    type: primary
   - text: 从学习路线开始
     link: /guide/00-overview.html
-    type: primary
-  - text: 选择使用入口
-    link: /platform/
     type: default
-  - text: 浏览实战案例
-    link: /recipes/
+  - text: 打开 mrwhale.ai
+    link: https://mrwhale.ai
     type: default
 features:
+  - title: 接入 MrWhale API
+    icon: link
+    details: 创建 Token、配置 OPENAI_BASE_URL=https://mrwhale.ai/v1，与 Codex CLI 一起使用。
+  - title: MrWhale 主站
+    icon: home
+    details: 注册、充值、模型列表与 Claude Code / Cursor 接入文档均在 mrwhale.ai。
   - title: 桌面 App 入门路径
     icon: desktop
     details: 从电脑端安装到第一次任务，帮助新手先跑通完整闭环。
@@ -48,9 +54,15 @@ features:
 
 <section class="home-section home-intro">
 
+::: tip 先用 MrWhale，再跟着教程练
+1. 打开 **[mrwhale.ai](https://mrwhale.ai)** 注册并创建 Token（建议名称 `Codex`）。  
+2. 阅读本站 **[接入 MrWhale](/mrwhale/)** 或主站 **[Codex 接入文档](https://mrwhale.ai/docs/cli-codex)**。  
+3. 再按下方学习路线使用 Codex 桌面 App / CLI。教程正文来自开源 CodexGuide，**未改字**，仅增加接入提示。
+:::
+
 ## 这份教程适合谁
 
-CodexGuide 不是一份命令速查表，而是一份围绕真实工作流组织的实践指南。它帮助不同背景的人回答三个问题：我该从哪个入口开始，怎样把需求交给 Codex，怎样确认它交付的是可靠结果。
+本站不是一份命令速查表，而是一份围绕真实工作流组织的 **Codex 实践指南**。它帮助不同背景的人回答三个问题：我该从哪个入口开始，怎样把需求交给 Codex，怎样确认它交付的是可靠结果。
 
 <div class="home-metric-grid">
   <a class="home-metric-card" href="/guide/00-overview.html" data-tone="teal">

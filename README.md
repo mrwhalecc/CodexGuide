@@ -1,3 +1,5 @@
+<p><strong>MrWhale Codex 指南</strong> — 在线阅读 <a href="https://codex.mrwhale.ai">codex.mrwhale.ai</a> · API 接入 <a href="https://mrwhale.ai">mrwhale.ai</a> · 教程源自 <a href="https://github.com/freestylefly/CodexGuide">CodexGuide</a>（MIT，见 <a href="./NOTICE">NOTICE</a>）</p>
+
 <p align="center">
   <img src="./assets/banner.svg" alt="CodexGuide" width="920" />
 </p>

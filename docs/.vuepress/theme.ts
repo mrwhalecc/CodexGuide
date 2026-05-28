@@ -1,6 +1,8 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
 import navbar from "./navbar.js";
+import { mrwhaleSeoHead } from "./plugins/mrwhale-branding.js";
+import { MRWHALE_SITE, SITE_NAME } from "./mrwhale.js";
 import { getPageDescription, siteOgImage, siteUrl, toSiteUrl } from "./seo.js";
 import sidebar from "./sidebar/index.js";
 
@@ -16,15 +18,11 @@ const addMeta = (
 
 export default hopeTheme({
   hostname: `${siteUrl}/`,
-  logo: "/logo.svg",
-  favicon: "/logo.svg",
+  logo: "/mrwhale-logo.svg",
+  favicon: "/mrwhale-logo.svg",
 
-  author: {
-    name: "canghe",
-    url: "https://github.com/freestylefly",
-  },
+  repo: false,
 
-  repo: "https://github.com/freestylefly/CodexGuide",
   docsDir: "docs",
 
   navbar,
@@ -35,8 +33,8 @@ export default hopeTheme({
   focus: false,
   breadcrumb: true,
   displayFooter: true,
-  footer: "MIT Licensed | Copyright © 2026 canghe",
-  pageInfo: ["Author", "Category", "Tag", "Date", "Original", "Word", "ReadingTime"],
+  footer: `© <a href="${MRWHALE_SITE}" rel="noopener noreferrer">MrWhale.ai</a> · <a href="/about/attribution.html">开源致谢</a> · 教程基于 <a href="https://github.com/freestylefly/CodexGuide" rel="noopener noreferrer">CodexGuide</a>（MIT）`,
+  pageInfo: ["Word", "ReadingTime"],
 
   blog: false,
 
@@ -54,12 +52,12 @@ export default hopeTheme({
   plugins: {
     copyCode: true,
     copyright: {
-      author: "CodexGuide(codexguide.ai)",
+      author: SITE_NAME,
       license: "MIT",
-      triggerLength: 100,
-      maxLength: 700,
-      canonical: "https://codexguide.ai/",
-      global: true,
+      triggerLength: 120,
+      maxLength: 500,
+      canonical: `${siteUrl}/`,
+      global: false,
     },
     feed: {
       atom: true,
@@ -72,8 +70,9 @@ export default hopeTheme({
       ogp: (ogp, page) => ({
         ...ogp,
         "og:description": getPageDescription(page.path),
+        "og:site_name": "MrWhale",
         "og:image": page.frontmatter.cover || page.frontmatter.banner ? ogp["og:image"] : siteOgImage,
-        "og:image:alt": `${page.title} - CodexGuide`,
+        "og:image:alt": `${page.title} - ${SITE_NAME}`,
         "og:locale": "zh_CN",
       }),
       jsonLd: (jsonLD, page) => ({
@@ -84,40 +83,48 @@ export default hopeTheme({
         inLanguage: "zh-CN",
         isPartOf: {
           "@type": "WebSite",
-          name: "CodexGuide",
+          name: SITE_NAME,
           url: `${siteUrl}/`,
+          publisher: {
+            "@type": "Organization",
+            name: "MrWhale",
+            url: `${MRWHALE_SITE}/`,
+          },
         },
         publisher: {
           "@type": "Organization",
-          name: "CodexGuide",
-          url: `${siteUrl}/`,
+          name: "MrWhale",
+          url: `${MRWHALE_SITE}/`,
           logo: {
             "@type": "ImageObject",
-            url: `${siteUrl}/logo.svg`,
+            url: `${MRWHALE_SITE}/logo.png`,
           },
         },
       }),
       customHead: (head, page) => {
         const description = getPageDescription(page.path);
-        const title = `${page.title} | CodexGuide`;
+        const title = `${page.title} | ${SITE_NAME}`;
+
+        mrwhaleSeoHead(head);
 
         addMeta(head, "name", "twitter:card", "summary_large_image");
         addMeta(head, "name", "twitter:title", title);
         addMeta(head, "name", "twitter:description", description);
         addMeta(head, "name", "twitter:image", siteOgImage);
-        addMeta(head, "name", "twitter:image:alt", `${page.title} - CodexGuide`);
+        addMeta(head, "name", "twitter:image:alt", `${page.title} - ${SITE_NAME}`);
+        addMeta(head, "property", "og:title", title);
       },
     },
     sitemap: {
       hostname: `${siteUrl}/`,
       changefreq: "weekly",
-      excludePaths: ["/404.html", "/guide/", "/community/"],
+      excludePaths: ["/404.html"],
     },
     slimsearch: {
       maxSuggestions: 10,
       locales: {
         "/": {
-          placeholder: "搜索 CodexGuide",
+          placeholder: `搜索 ${SITE_NAME}`,
         },
       },
     },

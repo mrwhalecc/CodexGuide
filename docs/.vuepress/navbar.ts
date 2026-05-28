@@ -1,7 +1,9 @@
 import { navbar } from "vuepress-theme-hope";
 
+import { MRWHALE_CONSOLE, MRWHALE_SITE } from "./mrwhale.js";
+
 export default navbar([
-  { text: "首页", icon: "home", link: "/" },
+  { text: "接入 MrWhale", icon: "link", link: "/mrwhale/" },
   { text: "学习路线", icon: "map", link: "/guide/00-overview.md" },
   { text: "入口地图", icon: "layout", link: "/platform/" },
   {
@@ -21,7 +23,7 @@ export default navbar([
     children: [
       { text: "实践方法", icon: "tool", link: "/practice/" },
       { text: "官方资料", icon: "link", link: "/reference/" },
-      { text: "共建路线图", icon: "people", link: "/community/roadmap.md" },
+      { text: "开源致谢", icon: "heart", link: "/about/attribution.md" },
     ],
   },
   {
@@ -69,11 +71,13 @@ export default navbar([
     ],
   },
   {
-    text: "交流群",
-    icon: "message",
-    ariaLabel: "交流群",
-    children: [
-      { text: "关注苍何公众号，回复 codex交流群 进入群交流", icon: "message", link: "/community/roadmap.md" },
-    ],
+    text: "控制台",
+    icon: "computer",
+    link: MRWHALE_CONSOLE,
+  },
+  {
+    text: "mrwhale.ai",
+    icon: "home",
+    link: MRWHALE_SITE,
   },
 ]);

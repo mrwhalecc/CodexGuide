@@ -1,6 +1,24 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
+  "/mrwhale/": [
+    {
+      text: "MrWhale",
+      icon: "link",
+      prefix: "/mrwhale/",
+      children: ["index.md"],
+    },
+  ],
+
+  "/about/": [
+    {
+      text: "关于本站",
+      icon: "info",
+      prefix: "/about/",
+      children: ["attribution.md"],
+    },
+  ],
+
   "/guide/": [
     { text: "学习路线", icon: "map", link: "/guide/00-overview.md" },
     {
@@ -136,9 +154,10 @@ export default sidebar({
 
   "/": [
     {
-      text: "CodexGuide",
+      text: "MrWhale Codex 指南",
       icon: "home",
       children: [
+        "/mrwhale/",
         "/guide/00-overview.md",
         "/guide/01-app-installation.md",
         "/guide/04-mobile-control-desktop.md",
@@ -148,7 +167,7 @@ export default sidebar({
         "/practice/",
         "/recipes/",
         "/reference/",
-        "/community/roadmap.md",
+        "/about/attribution.md",
       ],
     },
   ],
