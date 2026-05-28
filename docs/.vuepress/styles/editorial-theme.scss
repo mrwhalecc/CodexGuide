@@ -19,11 +19,11 @@
   --ed-link: #1e3a5f;
   --ed-link-hover: #0f1f33;
   --ed-link-underline: rgb(30 58 95 / 32%);
-  /* 代码块：中性深底 + 高对比浅字（只调对比，不改结构） */
-  --ed-code-bg: #1f2633;
-  --ed-code-ink: #edf2fa;
-  --ed-code-border: #334055;
-  --ed-code-line-number: #91a0b8;
+  /* 代码块：浅底深字，优先保证正文/模板可读性 */
+  --ed-code-bg: #f3f6fb;
+  --ed-code-ink: #1a2233;
+  --ed-code-border: #d6deea;
+  --ed-code-line-number: #74839a;
   --ed-warn: #9a6700;
   --ed-danger: #9f1239;
 
@@ -85,9 +85,9 @@
   --ed-link: #8eb8e8;
   --ed-link-hover: #b4d4f5;
   --ed-link-underline: rgb(142 184 232 / 38%);
-  --ed-code-bg: #171d29;
+  --ed-code-bg: #1a2333;
   --ed-code-ink: #edf2fa;
-  --ed-code-border: rgb(255 255 255 / 18%);
+  --ed-code-border: rgb(255 255 255 / 16%);
   --ed-code-line-number: #8d9bb1;
 
   --vp-c-accent: var(--ed-accent);
@@ -297,16 +297,30 @@ div[class*="language-"] pre[class*="language-"],
 div[class*="language-"] code,
 div[class*="language-"] pre code,
 div[class*="language-"] .line,
-div[class*="language-"] .line span,
 div[class*="language-"] span.line {
   color: var(--ed-code-ink) !important;
   background: transparent !important;
   -webkit-text-fill-color: var(--ed-code-ink) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* 保留语法 token，不要把所有 span 强行抹成同色，避免“像没解析” */
+div[class*="language-"] .line span {
+  background: transparent !important;
 }
 
 div[class*="language-"] .line-number {
   color: var(--ed-code-line-number) !important;
   border-inline-end-color: var(--ed-code-border) !important;
+}
+
+div[class*="language-"] pre {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  tab-size: 2;
 }
 
 /* 复制按钮等保持可读 */
