@@ -355,6 +355,21 @@ div[class*="language-"].line-numbers-mode .line-number::before {
   color: var(--ed-code-line-number) !important;
 }
 
+/* 根因修复：多数 markdown 代码块首行是空行，导致“行号与可见内容错一行” */
+div[class*="language-"].line-numbers-mode {
+  counter-reset: line-number 0 !important;
+}
+
+div[class*="language-"].line-numbers-mode pre code .line:first-child:empty,
+div[class*="language-"].line-numbers-mode pre code span.line:first-child:empty {
+  display: none !important;
+}
+
+div[class*="language-"].line-numbers-mode .line-number:first-child {
+  display: none !important;
+  counter-increment: none !important;
+}
+
 /* 复制按钮等保持可读 */
 div[class*="language-"] .copy-code-button,
 div[class*="language-"] button {
