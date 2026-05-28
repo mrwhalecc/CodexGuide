@@ -256,12 +256,34 @@
   margin: var(--space-6) 0;
 }
 
-.mw-diagram img,
-.vp-page:not(.vp-project-home) .vp-page-content img {
-  width: 100%;
+.mw-diagram {
+  padding: var(--space-4);
+  background: var(--ed-paper);
   border: 1px solid var(--ed-rule);
   border-radius: 2px;
-  background: var(--ed-paper);
+}
+
+.mw-diagram img,
+.vp-page:not(.vp-project-home) .vp-page-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  background: #fff;
+}
+
+/* Diagrams are authored for light paper — keep readable in dark site theme */
+[data-theme="dark"] .mw-diagram,
+[data-theme="dark"] .vp-page-content p:has(> img) {
+  background: #fff;
+  border-color: var(--ed-rule);
+}
+
+[data-theme="dark"] .mw-diagram img,
+[data-theme="dark"] .vp-page-content img[src*="/images/codex-"] {
+  background: #fff;
+  filter: none;
 }
 
 .mw-diagram::after {
