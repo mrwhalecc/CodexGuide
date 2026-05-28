@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="MrWhale">
+  <defs>
+    <linearGradient id="mw-bg" x1="8" y1="6" x2="40" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="14" fill="url(#mw-bg)"/>
+  <path fill="#fff" d="M10 26c2.2-6.2 7.4-10 13.5-10 4.2 0 7.8 1.8 10.2 4.8l-2.4 2.1c-1.8-2.3-4.6-3.6-7.8-3.6-4.8 0-8.7 3-10.2 7.2l-3.3-.5zm18.5-1.2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-8 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/>
+  <path fill="#fff" fill-opacity=".92" d="M32 18c3.5 1.2 6 4.2 6.5 8.2-4.5-.8-8.2-3.6-10.2-7.5 1.2-1 2.6-1.5 3.7-.7z"/>
+</svg>

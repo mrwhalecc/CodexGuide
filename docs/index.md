@@ -4,9 +4,9 @@ icon: home
 title: MrWhale Codex 指南
 description: "MrWhale Codex 指南：系统学习 Codex；API、Token 与按量计费请前往 mrwhale.ai。"
 pageClass: codex-home-page
-heroImage: /mrwhale-logo.svg
+heroImage: /mrwhale-mark.svg
 heroText: MrWhale Codex 指南
-tagline: 在 codex.mrwhale.ai 学完 Codex 怎么用；在 mrwhale.ai 完成 API 接入与 Token 配置。
+tagline: 系统学习 Codex 怎么用；API、Token 与按量计费在 mrwhale.ai 一站完成。
 actions:
   - text: 接入 MrWhale API
     link: /mrwhale/
@@ -24,41 +24,32 @@ features:
   - title: MrWhale 主站
     icon: home
     details: 注册、充值、模型列表与 Claude Code / Cursor 接入文档均在 mrwhale.ai。
-  - title: 桌面 App 入门路径
-    icon: desktop
-    details: 从电脑端安装到第一次任务，帮助新手先跑通完整闭环。
   - title: CLI 工程实践
     icon: terminal
-    details: 覆盖本地仓库、命令执行、测试验证、提交说明和排障流程。
-  - title: Skills 与插件
-    icon: plugin
-    details: 梳理 MCP、Skills、Subagents、浏览器和自动化能力的组合方式。
-  - title: 安全与权限
-    icon: lock
-    details: 解释沙盒、审批、网络、凭据和团队使用时的边界设置。
-  - title: 移动协同
-    icon: mobile
-    details: 说明如何用手机端发起 Codex 任务，并把进展接回桌面端工作流。
+    details: 本地仓库、命令执行、测试验证与排障，形成可检查的工程闭环。
+  - title: 桌面 App 入门
+    icon: desktop
+    details: 从安装到第一个低风险任务，先跑通完整使用闭环。
   - title: 真实案例库
     icon: lightbulb
-    details: 收录 13 个可迁移案例，覆盖内容生产、知识库、浏览器、CI 与远程排障。
-  - title: 团队沉淀
-    icon: people
-    details: 提供 AGENTS.md、任务模板、复盘结构和团队推广方法。
-  - title: 配置与排障
-    icon: wrench
-    details: 汇总配置文件、CLI 选项、常见错误和恢复路径，方便遇到问题时快速定位。
+    details: 13 个可迁移场景：PPT、浏览器、Obsidian、飞书、CI 修复等。
+  - title: 安全与权限
+    icon: lock
+    details: 沙盒、审批、网络与凭据边界，适合上线前核对。
 ---
 
 <div class="codex-home">
 
 <section class="home-section home-intro">
 
-::: tip 先用 MrWhale，再跟着教程练
-1. 打开 **[mrwhale.ai](https://mrwhale.ai)** 注册并创建 Token（建议名称 `Codex`）。  
-2. 阅读本站 **[接入 MrWhale](/mrwhale/)** 或主站 **[Codex 接入文档](https://mrwhale.ai/docs/cli-codex)**。  
-3. 再按下方学习路线使用 Codex 桌面 App / CLI。教程正文来自开源 CodexGuide，**未改字**，仅增加接入提示。
-:::
+<div class="mrwhale-onboard">
+  <p class="mrwhale-onboard__title">推荐：先接入 API，再跟着教程练</p>
+  <ol class="mrwhale-onboard__steps">
+    <li><strong>1</strong><span>打开 <a href="https://mrwhale.ai" rel="noopener noreferrer">mrwhale.ai</a> 注册，在控制台创建 Token（建议命名 Codex）。</span></li>
+    <li><strong>2</strong><span>阅读 <a href="/mrwhale/">接入 MrWhale</a> 或主站 <a href="https://mrwhale.ai/docs/cli-codex" rel="noopener noreferrer">Codex 接入文档</a>。</span></li>
+    <li><strong>3</strong><span>按下方学习路线使用桌面 App / CLI；教程正文来自开源 CodexGuide，未改字。</span></li>
+  </ol>
+</div>
 
 ## 这份教程适合谁
 
@@ -219,9 +210,9 @@ Codex 的能力会出现在 App、CLI、Cloud、IDE、ChatGPT 和集成生态里
 如果你只有二十分钟，先完成桌面 App 路线的前五节；如果你已经在项目里写代码，直接从 CLI 安装和第一次本地任务开始。读完第一轮后，再回到配置、权限和案例库，把真实流程固化为可复用的工作方法。
 
 <div class="home-action-row">
-  <a class="home-primary-link" href="/guide/00-overview.html">进入学习路线</a>
-  <a href="/configuration/">查看配置专题</a>
-  <a href="/community/roadmap.html">参与共建</a>
+  <a class="home-primary-link" href="/mrwhale/">接入 MrWhale API</a>
+  <a href="/guide/00-overview.html">进入学习路线</a>
+  <a href="https://mrwhale.ai/docs/cli-codex" rel="noopener noreferrer">主站接入文档</a>
 </div>
 
 ::: tip 最后核对

@@ -1,6 +1,7 @@
 ---
 title: 接入 MrWhale
 icon: link
+pageClass: mrwhale-connect-page
 description: 在 MrWhale.ai 创建 Token，将 Codex CLI 指向 OpenAI 兼容网关，与 MrWhale Codex 指南配合使用。
 ---
 
