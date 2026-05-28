@@ -1,0 +1,269 @@
+/* Nav, sidebars, TOC, footer, chrome */
+
+body {
+  font-family: var(--ed-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--ed-ink-muted);
+  background: var(--vp-c-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* —— Top bar —— */
+.vp-navbar {
+  height: auto !important;
+  min-height: 3.5rem;
+  padding: var(--space-3) var(--space-5) !important;
+  background: var(--vp-c-bg) !important;
+  border-bottom: 1px solid var(--ed-rule);
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.vp-navbar-brand .vp-site-name {
+  display: none !important;
+}
+
+.vp-site-logo,
+.vp-navbar-brand img {
+  height: 1.5rem !important;
+  width: auto !important;
+}
+
+.vp-navbar-items {
+  gap: var(--space-1) !important;
+}
+
+.vp-nav-item > .route-link,
+.vp-dropdown-title {
+  padding: var(--space-2) var(--space-3) !important;
+  font-size: var(--text-sm) !important;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  color: var(--ed-ink-muted) !important;
+}
+
+.vp-nav-item > .route-link:hover,
+.vp-dropdown-title:hover {
+  color: var(--ed-ink) !important;
+  background: var(--ed-paper);
+}
+
+.vp-nav-item:nth-child(2) > .route-link {
+  color: var(--ed-accent) !important;
+}
+
+.vp-nav-item:last-child > .route-link {
+  margin-inline-start: var(--space-2);
+  padding: 0.4rem 0.9rem !important;
+  border: 1px solid var(--ed-rule-strong);
+  border-radius: 2px;
+  color: var(--ed-ink) !important;
+  background: transparent;
+  font-size: var(--text-xs) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vp-nav-item:last-child > .route-link:hover {
+  background: var(--ed-ink);
+  border-color: var(--ed-ink);
+  color: #fff !important;
+}
+
+.vp-navbar .search-box input,
+.vp-navbar .slimsearch-input {
+  font-size: var(--text-sm) !important;
+  border-radius: 2px;
+  border-color: var(--ed-rule) !important;
+}
+
+[data-theme="dark"] .vp-navbar-brand img {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+/* —— Left sidebar —— */
+.vp-sidebar {
+  width: var(--ed-sidebar) !important;
+  padding: var(--space-5) var(--space-4) var(--space-6) !important;
+  border-inline-end: 1px solid var(--ed-rule);
+  font-size: var(--text-sm);
+  background: var(--vp-c-bg);
+}
+
+.vp-sidebar-title {
+  margin-bottom: var(--space-2);
+  padding: 0 var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-ink-faint);
+  line-height: 1.4;
+}
+
+.vp-sidebar-link,
+.vp-sidebar-group .vp-sidebar-link {
+  margin: 0;
+  padding: 0.45rem var(--space-3) !important;
+  line-height: 1.45 !important;
+  border-radius: 2px;
+  color: var(--ed-ink-muted) !important;
+  font-weight: 500;
+}
+
+.vp-sidebar-link:hover {
+  color: var(--ed-ink) !important;
+  background: var(--ed-paper);
+}
+
+.vp-sidebar-link.active {
+  color: var(--ed-accent) !important;
+  font-weight: 600;
+  background: var(--ed-accent-muted) !important;
+  border-inline-start: none;
+  box-shadow: inset 2px 0 0 var(--ed-accent);
+}
+
+.vp-sidebar-group + .vp-sidebar-group {
+  margin-top: var(--space-5);
+}
+
+/* —— Right TOC (此页内容) —— */
+.vp-toc,
+.toc {
+  padding: var(--space-5) var(--space-4) var(--space-6) !important;
+  width: var(--ed-toc) !important;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.vp-toc-title,
+.toc-title {
+  margin-bottom: var(--space-3) !important;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--ed-rule);
+  font-family: var(--ed-sans) !important;
+  font-size: var(--text-xs) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-ink-faint) !important;
+}
+
+.vp-toc-list,
+.toc-list {
+  margin: 0;
+  padding: 0;
+}
+
+.vp-toc-link,
+.toc-link {
+  display: block;
+  margin: 0;
+  padding: 0.4rem 0 !important;
+  line-height: 1.45 !important;
+  color: var(--ed-ink-muted) !important;
+  font-weight: 500;
+  border: none;
+}
+
+.vp-toc-link:hover,
+.toc-link:hover {
+  color: var(--ed-ink) !important;
+}
+
+.vp-toc-link.active,
+.toc-link.active {
+  color: var(--ed-accent) !important;
+  font-weight: 600;
+}
+
+.vp-toc-link .vp-toc-link,
+.toc-link .toc-link {
+  padding-inline-start: var(--space-3) !important;
+  font-size: var(--text-xs);
+  color: var(--ed-ink-faint) !important;
+}
+
+/* —— Breadcrumb & meta —— */
+.vp-breadcrumb {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ed-ink-faint);
+  line-height: 1.4;
+}
+
+.vp-breadcrumb a {
+  color: var(--ed-ink-faint) !important;
+  text-decoration: none;
+}
+
+.vp-breadcrumb a:hover {
+  color: var(--ed-accent) !important;
+}
+
+.vp-page-meta,
+.meta-item.contributor {
+  display: none !important;
+}
+
+/* —— Page shell —— */
+.vp-page:not(.vp-project-home) {
+  padding-top: var(--space-5);
+}
+
+.vp-page:not(.vp-project-home) .vp-page-title {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  font-family: var(--ed-serif);
+  font-size: clamp(1.65rem, 3.5vw, 2.125rem);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.025em;
+  color: var(--ed-ink);
+  border-bottom: 1px solid var(--ed-rule-strong);
+}
+
+.vp-page:not(.vp-project-home) .theme-hope-content {
+  max-width: none;
+}
+
+.vp-page:not(.vp-project-home) .vp-page-content-wrapper,
+.vp-page:not(.vp-project-home) .vp-page-content {
+  padding-inline: var(--space-5);
+}
+
+/* Back to top */
+.vp-back-to-top,
+.back-to-top {
+  border: 1px solid var(--ed-rule) !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  background: var(--vp-c-bg) !important;
+  color: var(--ed-ink-muted) !important;
+}
+
+.vp-footer-wrapper {
+  margin-top: var(--space-8);
+  border-top: 1px solid var(--ed-rule-strong);
+  padding: var(--space-5) var(--space-5) var(--space-6) !important;
+  font-size: var(--text-xs);
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  color: var(--ed-ink-faint);
+}
+
+.vp-footer-wrapper a {
+  color: var(--ed-ink-muted) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.vp-footer-wrapper a:hover {
+  color: var(--ed-accent) !important;
+}

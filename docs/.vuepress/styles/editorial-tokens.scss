@@ -1,0 +1,87 @@
+/**
+ * Design tokens — single source for type, color, space
+ */
+
+:root {
+  /* Typography */
+  --ed-serif: "Source Serif 4", "Noto Serif SC", "Songti SC", Georgia, serif;
+  --ed-sans: "Source Sans 3", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --ed-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 1rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.3125rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+
+  --leading-tight: 1.25;
+  --leading-body: 1.72;
+  --leading-relaxed: 1.8;
+
+  /* Ink palette — restrained, not default link-blue UI */
+  --ed-ink: #0c1222;
+  --ed-ink-muted: #3d4f66;
+  --ed-ink-faint: #6b7c93;
+  --ed-rule: #d8dee8;
+  --ed-rule-strong: #0c1222;
+  --ed-paper: #f6f7f9;
+  --ed-paper-elevated: #fff;
+  --ed-accent: #1a365d;
+  --ed-accent-hover: #0f2744;
+  --ed-accent-muted: rgb(26 54 93 / 12%);
+  --ed-code-bg: #1a1d24;
+  --ed-code-ink: #e8eaed;
+
+  --ed-measure: 40rem;
+  --ed-wide: 70rem;
+  --ed-sidebar: 15.5rem;
+  --ed-toc: 11.5rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.75rem;
+  --space-8: 3.5rem;
+
+  /* VuePress Hope overrides */
+  --vp-font-family: var(--ed-sans);
+  --vp-font-family-mono: var(--ed-mono);
+  --theme-color: var(--ed-accent);
+  --vp-c-accent: var(--ed-accent);
+  --vp-c-accent-bg: var(--ed-accent-hover);
+  --vp-c-accent-soft: var(--ed-accent-muted);
+  --vp-c-text: var(--ed-ink-muted);
+  --vp-c-text-1: var(--ed-ink);
+  --vp-c-text-2: var(--ed-ink-muted);
+  --vp-c-text-3: var(--ed-ink-faint);
+  --vp-c-border: var(--ed-rule);
+  --vp-c-bg: var(--ed-paper-elevated);
+  --vp-c-bg-soft: var(--ed-paper);
+  --vp-c-divider: var(--ed-rule);
+  --vp-c-brand: var(--ed-accent);
+  --vp-c-brand-1: var(--ed-accent);
+  --vp-c-brand-2: var(--ed-accent-hover);
+  --vp-c-brand-3: var(--ed-accent-muted);
+}
+
+[data-theme="dark"] {
+  --ed-ink: #eef1f6;
+  --ed-ink-muted: #b8c2d0;
+  --ed-ink-faint: #7d8da3;
+  --ed-rule: rgb(255 255 255 / 11%);
+  --ed-rule-strong: rgb(255 255 255 / 35%);
+  --ed-paper: #111827;
+  --ed-paper-elevated: #0a0f18;
+  --ed-accent: #7eb3e8;
+  --ed-accent-hover: #a8ccef;
+  --ed-accent-muted: rgb(126 179 232 / 14%);
+  --ed-code-bg: #0d1117;
+  --vp-c-bg: var(--ed-paper-elevated);
+  --vp-c-bg-soft: var(--ed-paper);
+}
