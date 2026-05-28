@@ -331,6 +331,8 @@ div[class*="language-"].line-numbers-mode pre {
 
 div[class*="language-"].line-numbers-mode .line-numbers-wrapper {
   width: 2.6rem !important;
+  padding-top: var(--space-4) !important;
+  padding-bottom: var(--space-4) !important;
   border-inline-end: 1px solid var(--ed-code-border) !important;
   background: transparent !important;
 }
