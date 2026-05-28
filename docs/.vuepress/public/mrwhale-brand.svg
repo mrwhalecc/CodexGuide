@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 28" role="img" aria-label="MrWhale">
-  <text x="0" y="21" font-family="Georgia, 'Source Serif 4', 'Noto Serif SC', serif" font-size="20" font-weight="600" fill="#0f172a">MrWhale</text>
-  <text x="92" y="21" font-family="'Source Sans 3', 'PingFang SC', sans-serif" font-size="13" font-weight="600" letter-spacing="0.08em" fill="#64748b">CODEX</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 32" role="img" aria-label="MrWhale Codex 指南">
+  <text x="0" y="22" font-family="Georgia, 'Source Serif 4', 'Noto Serif SC', serif" font-size="19" font-weight="600" fill="#0c1222">MrWhale</text>
+  <text x="98" y="22" font-family="'Source Sans 3', 'PingFang SC', sans-serif" font-size="12" font-weight="500" fill="#6b7c93">Codex 指南</text>
 </svg>
