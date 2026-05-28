@@ -1,0 +1,309 @@
+/**
+ * Global color system — overrides VuePress Hope defaults (green hero, blue callouts, accent bars)
+ * Palette: ink + paper + single navy accent (consulting report, no rainbow UI)
+ */
+
+:root {
+  /* Core */
+  --ed-ink: #121826;
+  --ed-ink-muted: #404a5a;
+  --ed-ink-faint: #6e7a8c;
+  --ed-rule: #e2e6ed;
+  --ed-rule-strong: #121826;
+  --ed-paper: #f4f5f7;
+  --ed-paper-elevated: #ffffff;
+  --ed-accent: #1e3a5f;
+  --ed-accent-hover: #152a45;
+  --ed-accent-muted: rgb(30 58 95 / 10%);
+  --ed-accent-soft: rgb(30 58 95 / 6%);
+  --ed-link: #1e3a5f;
+  --ed-link-hover: #0f1f33;
+  --ed-link-underline: rgb(30 58 95 / 32%);
+  --ed-code-bg: #eceff4;
+  --ed-code-ink: #121826;
+  --ed-code-border: #d5dae3;
+  --ed-warn: #9a6700;
+  --ed-danger: #9f1239;
+
+  /* Hope — force entire theme onto editorial palette */
+  --theme-color: var(--ed-accent);
+  --vp-c-accent: var(--ed-accent);
+  --vp-c-accent-hover: var(--ed-accent-hover);
+  --vp-c-accent-bg: var(--ed-accent-hover);
+  --vp-c-accent-soft: var(--ed-accent-muted);
+  --vp-c-brand: var(--ed-accent);
+  --vp-c-brand-1: var(--ed-accent);
+  --vp-c-brand-2: var(--ed-accent-hover);
+  --vp-c-brand-3: var(--ed-accent-muted);
+  --vp-c-text: var(--ed-ink-muted);
+  --vp-c-text-1: var(--ed-ink);
+  --vp-c-text-2: var(--ed-ink-muted);
+  --vp-c-text-3: var(--ed-ink-faint);
+  --vp-c-border: var(--ed-rule);
+  --vp-c-divider: var(--ed-rule);
+  --vp-c-bg: var(--ed-paper-elevated);
+  --vp-c-bg-alt: var(--ed-paper);
+  --vp-c-bg-soft: var(--ed-paper);
+  --vp-c-bg-elv: var(--ed-paper-elevated);
+  --vp-c-gutter: var(--ed-paper);
+
+  /* Neutralize Hope semantic color chips (hints, badges) */
+  --vp-c-indigo-text: var(--ed-accent);
+  --vp-c-indigo-bg: var(--ed-accent);
+  --vp-c-indigo-soft: var(--ed-accent-muted);
+  --vp-c-blue-text: var(--ed-accent);
+  --vp-c-blue-bg: var(--ed-accent);
+  --vp-c-blue-soft: var(--ed-accent-muted);
+  --vp-c-green-text: var(--ed-ink-muted);
+  --vp-c-green-bg: var(--ed-accent);
+  --vp-c-green-soft: var(--ed-accent-soft);
+  --vp-c-purple-text: var(--ed-ink-muted);
+  --vp-c-purple-bg: var(--ed-accent);
+  --vp-c-purple-soft: var(--ed-accent-soft);
+  --vp-c-yellow-text: var(--ed-warn);
+  --vp-c-yellow-bg: var(--ed-warn);
+  --vp-c-yellow-soft: rgb(154 103 0 / 10%);
+  --vp-c-red-text: var(--ed-danger);
+  --vp-c-red-bg: var(--ed-danger);
+  --vp-c-red-soft: rgb(159 18 57 / 10%);
+}
+
+[data-theme="dark"] {
+  --ed-ink: #eef1f6;
+  --ed-ink-muted: #b8c2d0;
+  --ed-ink-faint: #8b98ab;
+  --ed-rule: rgb(255 255 255 / 12%);
+  --ed-rule-strong: rgb(255 255 255 / 38%);
+  --ed-paper: #141a24;
+  --ed-paper-elevated: #0c1018;
+  --ed-accent: #8eb8e8;
+  --ed-accent-hover: #b4d4f5;
+  --ed-accent-muted: rgb(142 184 232 / 16%);
+  --ed-accent-soft: rgb(142 184 232 / 10%);
+  --ed-link: #8eb8e8;
+  --ed-link-hover: #b4d4f5;
+  --ed-link-underline: rgb(142 184 232 / 38%);
+  --ed-code-bg: #1a2030;
+  --ed-code-ink: #e8ecf2;
+  --ed-code-border: rgb(255 255 255 / 14%);
+
+  --vp-c-accent: var(--ed-accent);
+  --vp-c-accent-hover: var(--ed-accent-hover);
+  --vp-c-accent-bg: var(--ed-accent-hover);
+  --vp-c-accent-soft: var(--ed-accent-muted);
+  --vp-c-bg: var(--ed-paper-elevated);
+  --vp-c-bg-soft: var(--ed-paper);
+}
+
+/* —— Links (global) —— */
+a {
+  color: var(--ed-link);
+}
+
+a:hover {
+  color: var(--ed-link-hover);
+}
+
+/* —— Hero (Hope gradient title) —— */
+.vp-hero-title,
+.vp-hero-title[data-theme="dark"] {
+  color: var(--ed-ink) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--ed-ink) !important;
+  background-clip: border-box !important;
+}
+
+.vp-hero-description {
+  color: var(--ed-ink-muted) !important;
+}
+
+/* Hero buttons — all home wrappers */
+.vp-project-home .vp-hero-actions .vp-button,
+.magazine-home .vp-hero-actions .vp-button {
+  border-radius: 2px !important;
+  font-family: var(--ed-sans) !important;
+  font-size: var(--text-sm) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  box-shadow: none !important;
+}
+
+.vp-project-home .vp-hero-actions .vp-button.primary,
+.magazine-home .vp-hero-actions .vp-button.primary {
+  background: var(--ed-ink) !important;
+  border: 1px solid var(--ed-ink) !important;
+  color: #fff !important;
+}
+
+.vp-project-home .vp-hero-actions .vp-button.primary:hover,
+.magazine-home .vp-hero-actions .vp-button.primary:hover {
+  background: var(--ed-accent-hover) !important;
+  border-color: var(--ed-accent-hover) !important;
+}
+
+.vp-project-home .vp-hero-actions .vp-button.default,
+.magazine-home .vp-hero-actions .vp-button.default {
+  background: var(--ed-paper-elevated) !important;
+  border: 1px solid var(--ed-rule) !important;
+  color: var(--ed-ink-muted) !important;
+}
+
+.vp-project-home .vp-hero-actions .vp-button.default:hover,
+.magazine-home .vp-hero-actions .vp-button.default:hover {
+  border-color: var(--ed-ink-faint) !important;
+  color: var(--ed-ink) !important;
+}
+
+/* —— Navbar active / hover bars (Hope ::before uses accent green) —— */
+.vp-navbar .auto-link::before,
+.vp-navbar .route-link::before {
+  background: var(--ed-ink) !important;
+}
+
+.vp-navbar .auto-link.route-link-active,
+.vp-navbar .auto-link.router-link-active,
+.vp-nav-item > .auto-link.route-link-active {
+  color: var(--ed-ink) !important;
+}
+
+.vp-navbar .auto-link:hover,
+.vp-navbar .auto-link.route-link-active {
+  color: var(--ed-ink) !important;
+}
+
+/* —— Sidebar & TOC active —— */
+.vp-sidebar-link.active,
+.vp-sidebar-link.route-link-active {
+  color: var(--ed-accent) !important;
+  background: var(--ed-accent-soft) !important;
+  box-shadow: inset 2px 0 0 var(--ed-accent) !important;
+}
+
+.vp-toc-link.active,
+.toc-link.active {
+  color: var(--ed-accent) !important;
+}
+
+/* —— Callouts — unified paper, no blue/green boxes —— */
+.hint-container,
+.hint-container.info,
+.hint-container.tip,
+.hint-container.note,
+.hint-container.important {
+  --hint-container-color: var(--ed-accent) !important;
+  border-color: var(--ed-rule) !important;
+  border-inline-start-color: var(--ed-accent) !important;
+  background: var(--ed-paper) !important;
+  color: var(--ed-ink-muted) !important;
+}
+
+.hint-container.warning,
+.hint-container.caution {
+  --hint-container-color: var(--ed-warn) !important;
+  border-inline-start-color: var(--ed-warn) !important;
+  background: var(--ed-paper) !important;
+}
+
+.hint-container.danger {
+  --hint-container-color: var(--ed-danger) !important;
+  border-inline-start-color: var(--ed-danger) !important;
+  background: var(--ed-paper) !important;
+}
+
+.hint-container .hint-container-title {
+  color: var(--ed-ink-faint) !important;
+}
+
+.hint-container .hint-container-content,
+.hint-container p,
+.hint-container li {
+  color: var(--ed-ink-muted) !important;
+}
+
+.hint-container a {
+  color: var(--ed-link) !important;
+}
+
+/* —— Home cards: kill data-tone rainbow —— */
+.home-metric-card[data-tone],
+.home-loop-item[data-tone],
+.home-path-card[data-tone] {
+  border-color: var(--ed-rule) !important;
+  background: var(--ed-paper-elevated) !important;
+}
+
+.home-metric-card[data-tone]:hover {
+  background: var(--ed-paper) !important;
+}
+
+.codex-home a:not(.vp-button) {
+  color: var(--ed-link);
+}
+
+.codex-home a:not(.vp-button):hover {
+  color: var(--ed-link-hover);
+}
+
+/* —— Buttons & search focus —— */
+.vp-button.primary,
+.vp-page-nav .route-link {
+  background: var(--ed-ink) !important;
+  border-color: var(--ed-ink) !important;
+}
+
+.search-box input:focus,
+.slimsearch-input:focus {
+  border-color: var(--ed-accent) !important;
+  outline: 2px solid var(--ed-accent-muted) !important;
+}
+
+::selection {
+  background: var(--ed-accent-muted);
+  color: var(--ed-ink);
+}
+
+/* —— Code blocks (```text / ```bash) — Shiki 常带深灰字，必须压到浅底上 —— */
+div[class*="language-"],
+.code-tabs div[class*="language-"] {
+  background: var(--ed-code-bg) !important;
+  border: 1px solid var(--ed-code-border) !important;
+  border-radius: 2px !important;
+}
+
+div[class*="language-"] pre,
+div[class*="language-"] pre[class*="language-"],
+.code-tabs pre {
+  margin: 0 !important;
+  padding: var(--space-4) var(--space-4) var(--space-4) 0 !important;
+  background: transparent !important;
+  color: var(--ed-code-ink) !important;
+}
+
+div[class*="language-"] code,
+div[class*="language-"] pre code,
+div[class*="language-"] .line,
+div[class*="language-"] .line span,
+div[class*="language-"] span.line {
+  color: var(--ed-code-ink) !important;
+  background: transparent !important;
+  -webkit-text-fill-color: var(--ed-code-ink) !important;
+}
+
+div[class*="language-"] .line-number {
+  color: var(--ed-ink-faint) !important;
+  border-inline-end-color: var(--ed-code-border) !important;
+}
+
+/* 复制按钮等保持可读 */
+div[class*="language-"] .copy-code-button,
+div[class*="language-"] button {
+  color: var(--ed-ink-muted) !important;
+  border-color: var(--ed-code-border) !important;
+}
+
+div[class*="language-"] .lang {
+  color: var(--ed-ink-faint) !important;
+  background: var(--ed-paper-elevated) !important;
+  border-color: var(--ed-code-border) !important;
+}

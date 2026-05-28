@@ -29,11 +29,16 @@
   --ed-rule-strong: #0c1222;
   --ed-paper: #f6f7f9;
   --ed-paper-elevated: #fff;
-  --ed-accent: #1a365d;
-  --ed-accent-hover: #0f2744;
-  --ed-accent-muted: rgb(26 54 93 / 12%);
-  --ed-code-bg: #1a1d24;
-  --ed-code-ink: #e8eaed;
+  --ed-accent: #1e3a5f;
+  --ed-accent-hover: #152a45;
+  --ed-accent-muted: rgb(30 58 95 / 10%);
+  --ed-link: #1e3a5f;
+  --ed-link-hover: #0f1f33;
+  --ed-link-underline: rgb(30 58 95 / 32%);
+  /* 代码块：浅底深字（与正文一致，避免黑底+灰字不可读） */
+  --ed-code-bg: #eceff4;
+  --ed-code-ink: #121826;
+  --ed-code-border: #d5dae3;
 
   --ed-measure: 40rem;
   --ed-wide: 70rem;
@@ -81,7 +86,9 @@
   --ed-accent: #7eb3e8;
   --ed-accent-hover: #a8ccef;
   --ed-accent-muted: rgb(126 179 232 / 14%);
-  --ed-code-bg: #0d1117;
+  --ed-code-bg: #1a2030;
+  --ed-code-ink: #e8ecf2;
+  --ed-code-border: rgb(255 255 255 / 14%);
   --vp-c-bg: var(--ed-paper-elevated);
   --vp-c-bg-soft: var(--ed-paper);
 }
