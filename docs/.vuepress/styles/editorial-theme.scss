@@ -343,6 +343,7 @@ div[class*="language-"].line-numbers-mode .line-number {
   width: 100%;
   padding-right: 0.55rem;
   text-align: right;
+  font-family: var(--ed-mono) !important;
   font-size: 0.92rem !important;
   line-height: 1.65 !important;
 }
@@ -351,10 +352,12 @@ div[class*="language-"].line-numbers-mode .line-number {
 div[class*="language-"].line-numbers-mode .line-number::before {
   display: block;
   width: 100%;
+  font-family: var(--ed-mono) !important;
   font-size: 0.92rem !important;
   line-height: 1.65 !important;
   text-align: right;
   color: var(--ed-code-line-number) !important;
+  -webkit-text-fill-color: var(--ed-code-line-number) !important;
 }
 
 /* 复制按钮等保持可读 */
