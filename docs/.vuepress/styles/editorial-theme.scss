@@ -289,7 +289,7 @@ div[class*="language-"] pre,
 div[class*="language-"] pre[class*="language-"],
 .code-tabs pre {
   margin: 0 !important;
-  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-4) !important;
+  padding: 0 !important;
   background: transparent !important;
   color: var(--ed-code-ink) !important;
 }
@@ -326,16 +326,15 @@ div[class*="language-"] pre {
 
 /* 行号模式：强制分栏，避免和正文序号混在一起 */
 div[class*="language-"].line-numbers-mode pre {
-  /* 右侧内容统一四边 padding 体系 */
-  padding: var(--space-4) var(--space-4) var(--space-4) calc(3.2rem + var(--space-4)) !important;
+  /* 去掉右侧内容 padding，只保留行号预留宽度 */
+  padding-left: 3.2rem !important;
   line-height: 1.65 !important;
 }
 
 div[class*="language-"].line-numbers-mode .line-numbers-wrapper {
   width: 3.2rem !important;
   box-sizing: border-box;
-  /* 左侧行号统一四边 padding 体系（与 pre 同步） */
-  padding: var(--space-4) var(--space-2) var(--space-4) var(--space-4) !important;
+  padding: 0 var(--space-2) 0 var(--space-4) !important;
   border-inline-end: 1px solid var(--ed-code-border) !important;
   background: transparent !important;
 }
