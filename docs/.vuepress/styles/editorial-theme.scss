@@ -289,7 +289,7 @@ div[class*="language-"] pre,
 div[class*="language-"] pre[class*="language-"],
 .code-tabs pre {
   margin: 0 !important;
-  padding: var(--space-4) var(--space-4) var(--space-4) 0 !important;
+  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-4) !important;
   background: transparent !important;
   color: var(--ed-code-ink) !important;
 }
@@ -318,9 +318,29 @@ div[class*="language-"] .line-number {
 }
 
 div[class*="language-"] pre {
-  white-space: pre-wrap !important;
-  word-break: break-word !important;
+  white-space: pre !important;
+  word-break: normal !important;
+  overflow-x: auto !important;
   tab-size: 2;
+}
+
+/* 行号模式：强制分栏，避免和正文序号混在一起 */
+div[class*="language-"].line-numbers-mode pre {
+  padding-left: 3.4rem !important;
+}
+
+div[class*="language-"].line-numbers-mode .line-numbers-wrapper {
+  width: 2.6rem !important;
+  border-inline-end: 1px solid var(--ed-code-border) !important;
+  background: transparent !important;
+}
+
+div[class*="language-"].line-numbers-mode .line-number {
+  display: block;
+  width: 100%;
+  padding-right: 0.55rem;
+  text-align: right;
+  line-height: 1.65 !important;
 }
 
 /* 复制按钮等保持可读 */
