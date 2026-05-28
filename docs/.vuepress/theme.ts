@@ -34,7 +34,9 @@ export default hopeTheme({
   breadcrumb: true,
   displayFooter: true,
   footer: `© <a href="${MRWHALE_SITE}" rel="noopener noreferrer">MrWhale.ai</a> · <a href="/about/attribution.html">开源致谢</a> · 教程基于 <a href="https://github.com/freestylefly/CodexGuide" rel="noopener noreferrer">CodexGuide</a>（MIT）`,
-  pageInfo: ["Word", "ReadingTime"],
+  contributors: false,
+  lastUpdated: false,
+  pageInfo: false,
 
   blog: false,
 
@@ -50,6 +52,7 @@ export default hopeTheme({
   },
 
   plugins: {
+    git: false,
     copyCode: true,
     copyright: {
       author: SITE_NAME,

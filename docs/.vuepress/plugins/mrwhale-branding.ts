@@ -23,6 +23,10 @@ export const mrwhaleBrandingPlugin = (): Plugin => ({
   name: "mrwhale-branding",
 
   extendsPage(page) {
+    page.frontmatter.contributors = false;
+    page.frontmatter.lastUpdated = false;
+    page.frontmatter.editLink = false;
+
     if (shouldPrependCallout(page) && typeof page.content === "string") {
       if (!page.content.includes("使用 MrWhale API")) {
         page.content = `${MRWHALE_CALLOUT_MD}\n${page.content}`;
