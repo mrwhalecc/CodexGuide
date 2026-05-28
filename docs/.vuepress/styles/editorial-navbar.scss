@@ -11,17 +11,18 @@
   backdrop-filter: none !important;
 }
 
-.vp-navbar > .vp-navbar-container,
-.vp-navbar .vp-navbar-container {
+.vp-navbar .vp-navbar-container,
+.vp-navbar .vp-navbar-wrapper {
   display: flex !important;
-  align-items: stretch !important;
-  justify-content: flex-start !important;
-  gap: 0 !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: var(--space-4) !important;
   max-width: var(--ed-wide);
   width: 100%;
-  height: var(--nav-h);
+  min-height: var(--nav-h);
   margin: 0 auto;
   padding: 0 var(--space-5);
+  box-sizing: border-box;
 }
 
 /* Brand — logo only, no duplicate site title */
@@ -76,12 +77,12 @@
   flex-shrink: 0;
 }
 
-/* Hide icon clutter from Hope defaults */
-.vp-navbar .vp-icon,
-.vp-navbar .icon,
-.vp-navbar [class*=" vpi-"],
+/* 仅隐藏链接内的图标子节点（勿用 [class*=vpi]，会误伤整条 nav 链接） */
+.vp-navbar .vp-nav-item > .route-link > svg,
 .vp-navbar .vp-nav-item > .route-link > .icon,
-.vp-navbar .vp-dropdown-title > .icon {
+.vp-navbar .vp-dropdown-title > svg,
+.vp-navbar .vp-dropdown-title > .icon,
+.vp-navbar .vp-nav-item > .route-link > i[class*="icon"] {
   display: none !important;
 }
 
@@ -131,54 +132,10 @@ a.route-link.mw-nav-em:hover {
   border-bottom-color: var(--ed-accent);
 }
 
-/* CTA: 控制台 */
-.vp-nav-item.mw-nav-cta,
-.vp-nav-item:has(> .mw-nav-cta) {
-  margin-left: var(--space-2);
-  align-self: center;
-}
-
-.vp-nav-item.mw-nav-cta > .route-link,
-a.route-link.mw-nav-cta {
-  padding: 0.45rem 0.95rem !important;
-  height: auto !important;
-  font-size: var(--text-xs) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #fff !important;
-  background: var(--ed-ink) !important;
-  border: 1px solid var(--ed-ink) !important;
-  border-bottom: 1px solid var(--ed-ink) !important;
-  border-radius: 2px;
-}
-
-.vp-nav-item.mw-nav-cta > .route-link:hover,
-a.route-link.mw-nav-cta:hover {
-  background: var(--ed-accent-hover) !important;
-  border-color: var(--ed-accent-hover) !important;
-  color: #fff !important;
-}
-
-/* 外链 mrwhale.ai */
-.vp-nav-item.mw-nav-out,
-.vp-nav-item:has(> .mw-nav-out) {
-  align-self: center;
-}
-
-.vp-nav-item.mw-nav-out > .route-link,
-a.route-link.mw-nav-out {
-  padding: 0.45rem 0.75rem !important;
-  font-size: var(--text-xs) !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.04em;
-  color: var(--ed-ink-muted) !important;
-  border-bottom: none !important;
-}
-
-.vp-nav-item.mw-nav-out > .route-link:hover,
-a.route-link.mw-nav-out:hover {
-  color: var(--ed-accent) !important;
+/* 末项：接入 MrWhale */
+.vp-nav-item.mw-nav-em,
+.vp-nav-item:has(> .mw-nav-em) {
+  margin-left: var(--space-1);
 }
 
 /* Dropdown */
@@ -276,17 +233,5 @@ a.route-link.mw-nav-out:hover {
   .vp-navbar-brand {
     margin-right: var(--space-3);
     padding-right: var(--space-3);
-  }
-
-  .vp-nav-item.mw-nav-out,
-  .vp-nav-item:has(> .mw-nav-out) {
-    display: none;
-  }
-}
-
-@media (max-width: 719px) {
-  .vp-nav-item.mw-nav-cta > .route-link {
-    padding: 0.4rem 0.65rem !important;
-    font-size: 0.6875rem !important;
   }
 }

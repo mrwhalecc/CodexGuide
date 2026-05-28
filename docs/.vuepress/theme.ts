@@ -28,13 +28,6 @@ export default hopeTheme({
   navbar,
   sidebar,
 
-  /** 品牌 | 导航 | 搜索与主题 — 咨询站常见三栏顶栏 */
-  navbarLayout: {
-    start: ["brand"],
-    center: ["links"],
-    end: ["search", "outlook"],
-  },
-
   print: false,
   pure: true,
   focus: false,
