@@ -1,15 +1,76 @@
 import { navbar } from "vuepress-theme-hope";
 
-import { MRWHALE_SITE } from "./mrwhale.js";
+import { MRWHALE_CONSOLE, MRWHALE_SITE } from "./mrwhale.js";
 
 export default navbar([
-  { text: "接入 API", icon: "link", link: "/mrwhale/" },
+  { text: "首页", icon: "home", link: "/" },
+  { text: "接入 MrWhale", icon: "link", link: "/mrwhale/" },
   { text: "学习路线", icon: "map", link: "/guide/00-overview.md" },
-  { text: "教程", icon: "book", link: "/guide/00-overview.md" },
-  { text: "实战案例", icon: "lightbulb", link: "/recipes/" },
+  { text: "入口地图", icon: "layout", link: "/platform/" },
   {
-    text: "mrwhale.ai",
-    icon: "home",
-    link: MRWHALE_SITE,
+    text: "配置",
+    icon: "gear",
+    children: [
+      { text: "配置总览", icon: "map", link: "/configuration/" },
+      { text: "CLI 选项与命令", icon: "terminal", link: "/configuration/cli-options.md" },
+      { text: "config.toml", icon: "config", link: "/configuration/config-file.md" },
+      { text: "MCP、Skills 与 Subagents", icon: "plugin", link: "/configuration/mcp-skills-subagents.md" },
+      { text: "安全与审批", icon: "safe", link: "/configuration/security-admin.md" },
+    ],
   },
+  {
+    text: "资源",
+    icon: "box",
+    children: [
+      { text: "实践方法", icon: "tool", link: "/practice/" },
+      { text: "官方资料", icon: "link", link: "/reference/" },
+      { text: "开源致谢", icon: "heart", link: "/about/attribution.md" },
+    ],
+  },
+  {
+    text: "教程",
+    icon: "book",
+    children: [
+      { text: "01 桌面 App 安装", icon: "desktop", link: "/guide/01-app-installation.md" },
+      { text: "02 订阅 Plus", icon: "star", link: "/guide/02-subscribe-plus.md" },
+      { text: "03 桌面 App 总览", icon: "layout", link: "/guide/03-app-overview.md" },
+      { text: "04 手机端协同", icon: "mobile", link: "/guide/04-mobile-control-desktop.md" },
+      { text: "05 第一个任务", icon: "code", link: "/guide/05-app-first-task.md" },
+      { text: "06 任务执行", icon: "list", link: "/guide/06-task-execution.md" },
+      { text: "07 权限管理", icon: "safe", link: "/guide/07-permissions.md" },
+      { text: "08 技能与插件", icon: "plugin", link: "/guide/08-skills-plugins.md" },
+      { text: "09 自动化", icon: "time", link: "/guide/09-automation.md" },
+      { text: "10 桌面宠物", icon: "cat", link: "/guide/10-desktop-pet.md" },
+      { text: "11 CLI 安装", icon: "download", link: "/guide/11-cli-installation.md" },
+      { text: "12 CLI 改代码", icon: "edit", link: "/guide/12-cli-first-run.md" },
+      { text: "13 VS Code", icon: "code", link: "/guide/13-ide-vscode.md" },
+      { text: "14 AGENTS.md", icon: "file", link: "/guide/14-agents-md.md" },
+      { text: "15 沙盒与审批", icon: "lock", link: "/guide/15-sandbox-approvals.md" },
+      { text: "16 Codex Cloud", icon: "cloud", link: "/guide/16-cloud-ide-app.md" },
+      { text: "17 排障手册", icon: "debug", link: "/guide/17-troubleshooting.md" },
+    ],
+  },
+  {
+    text: "实战案例",
+    icon: "lightbulb",
+    children: [
+      { text: "案例总览", icon: "layout", link: "/recipes/" },
+      { text: "01 PPT Skill", icon: "slides", link: "/recipes/ppt-skill-walkthrough.md" },
+      { text: "02 Draw.io MCP", icon: "diagram", link: "/recipes/drawio-mcp.md" },
+      { text: "03 Playwright MCP", icon: "chrome", link: "/recipes/playwright-mcp.md" },
+      { text: "04 HyperFrames", icon: "video", link: "/recipes/hyperframes-animation.md" },
+      { text: "05 Obsidian", icon: "edit", link: "/recipes/obsidian-codex.md" },
+      { text: "06 飞书 CLI", icon: "message", link: "/recipes/feishu-cli-codex.md" },
+      { text: "07 LLM Wiki", icon: "note", link: "/recipes/llm-wiki-codex.md" },
+      { text: "08 Figma MCP", icon: "palette", link: "/recipes/figma-mcp-codex.md" },
+      { text: "09 Notion MCP", icon: "note", link: "/recipes/notion-mcp-codex.md" },
+      { text: "10 DKFile 发布", icon: "launch", link: "/recipes/dkfile-deploy-codex.md" },
+      { text: "11 远程排障", icon: "server", link: "/recipes/remote-bug-fix.md" },
+      { text: "12 Chrome 插件", icon: "chrome", link: "/recipes/chrome-browser-plugin.md" },
+      { text: "13 GitHub Actions", icon: "actions", link: "/recipes/github-actions-ci-fix.md" },
+      { text: "参考致谢", icon: "heart", link: "/recipes/credits.md" },
+    ],
+  },
+  { text: "控制台", icon: "computer", link: MRWHALE_CONSOLE },
+  { text: "mrwhale.ai", icon: "home", link: MRWHALE_SITE },
 ]);

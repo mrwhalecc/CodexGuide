@@ -27,6 +27,7 @@ export default defineUserConfig({
     ["meta", { name: "theme-color", content: "#0f172a" }],
     ["meta", { name: "format-detection", content: "telephone=no" }],
     ["link", { rel: "icon", href: "/mrwhale-mark.svg", type: "image/svg+xml" }],
+    ["link", { rel: "apple-touch-icon", href: "/mrwhale-mark.svg" }],
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" }],
     [

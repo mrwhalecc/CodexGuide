@@ -18,7 +18,7 @@ const addMeta = (
 
 export default hopeTheme({
   hostname: `${siteUrl}/`,
-  logo: "/mrwhale-mark.svg",
+  logo: "/mrwhale-brand.svg",
   favicon: "/mrwhale-mark.svg",
 
   repo: false,
