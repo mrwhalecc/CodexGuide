@@ -19,9 +19,11 @@
   --ed-link: #1e3a5f;
   --ed-link-hover: #0f1f33;
   --ed-link-underline: rgb(30 58 95 / 32%);
-  --ed-code-bg: #eceff4;
-  --ed-code-ink: #121826;
-  --ed-code-border: #d5dae3;
+  /* 代码块：中性深底 + 高对比浅字（只调对比，不改结构） */
+  --ed-code-bg: #1f2633;
+  --ed-code-ink: #edf2fa;
+  --ed-code-border: #334055;
+  --ed-code-line-number: #91a0b8;
   --ed-warn: #9a6700;
   --ed-danger: #9f1239;
 
@@ -83,9 +85,10 @@
   --ed-link: #8eb8e8;
   --ed-link-hover: #b4d4f5;
   --ed-link-underline: rgb(142 184 232 / 38%);
-  --ed-code-bg: #1a2030;
-  --ed-code-ink: #e8ecf2;
-  --ed-code-border: rgb(255 255 255 / 14%);
+  --ed-code-bg: #171d29;
+  --ed-code-ink: #edf2fa;
+  --ed-code-border: rgb(255 255 255 / 18%);
+  --ed-code-line-number: #8d9bb1;
 
   --vp-c-accent: var(--ed-accent);
   --vp-c-accent-hover: var(--ed-accent-hover);
@@ -246,10 +249,21 @@ a:hover {
 }
 
 /* —— Buttons & search focus —— */
-.vp-button.primary,
-.vp-page-nav .route-link {
+.vp-button.primary {
   background: var(--ed-ink) !important;
   border-color: var(--ed-ink) !important;
+}
+
+/* 上一页/下一页：避免深底深字 */
+.vp-page-nav .route-link {
+  background: var(--ed-paper) !important;
+  border: 1px solid var(--ed-rule) !important;
+  color: var(--ed-ink) !important;
+}
+
+.vp-page-nav .route-link:hover {
+  background: var(--ed-paper-elevated) !important;
+  border-color: var(--ed-ink-faint) !important;
 }
 
 .search-box input:focus,
@@ -291,14 +305,14 @@ div[class*="language-"] span.line {
 }
 
 div[class*="language-"] .line-number {
-  color: var(--ed-ink-faint) !important;
+  color: var(--ed-code-line-number) !important;
   border-inline-end-color: var(--ed-code-border) !important;
 }
 
 /* 复制按钮等保持可读 */
 div[class*="language-"] .copy-code-button,
 div[class*="language-"] button {
-  color: var(--ed-ink-muted) !important;
+  color: var(--ed-code-ink) !important;
   border-color: var(--ed-code-border) !important;
 }
 
