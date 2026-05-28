@@ -3,44 +3,25 @@ home: true
 icon: home
 title: MrWhale Codex 指南
 description: "MrWhale Codex 指南：系统学习 Codex；API、Token 与按量计费请前往 mrwhale.ai。"
-pageClass: codex-home-page mw-home
+pageClass: codex-home-page magazine-home
 heroImage: false
 heroText: MrWhale Codex 指南
 tagline: 系统学习 Codex 怎么用；API、Token 与按量计费在 mrwhale.ai 一站完成。
 actions:
-  - text: 接入 MrWhale API
+  - text: 接入 API
     link: /mrwhale/
     type: primary
-  - text: 从学习路线开始
+  - text: 开始学习
     link: /guide/00-overview.html
     type: default
-  - text: 打开 mrwhale.ai
+  - text: mrwhale.ai
     link: https://mrwhale.ai
     type: default
-features:
-  - title: 接入 MrWhale API
-    icon: link
-    details: 创建 Token、配置 OPENAI_BASE_URL=https://mrwhale.ai/v1，与 Codex CLI 一起使用。
-  - title: MrWhale 主站
-    icon: home
-    details: 注册、充值、模型列表与 Claude Code / Cursor 接入文档均在 mrwhale.ai。
-  - title: CLI 工程实践
-    icon: terminal
-    details: 本地仓库、命令执行、测试验证与排障，形成可检查的工程闭环。
-  - title: 桌面 App 入门
-    icon: desktop
-    details: 从安装到第一个低风险任务，先跑通完整使用闭环。
-  - title: 真实案例库
-    icon: lightbulb
-    details: 13 个可迁移场景：PPT、浏览器、Obsidian、飞书、CI 修复等。
-  - title: 安全与权限
-    icon: lock
-    details: 沙盒、审批、网络与凭据边界，适合上线前核对。
 ---
 
 <div class="codex-home">
 
-<section class="home-section home-intro">
+<section class="home-section home-intro ed-section">
 
 <div class="mrwhale-onboard">
   <p class="mrwhale-onboard__title">推荐：先接入 API，再跟着教程练</p>
@@ -50,6 +31,8 @@ features:
     <li><strong>3</strong><span>按下方学习路线使用桌面 App / CLI；教程正文来自开源 CodexGuide，未改字。</span></li>
   </ol>
 </div>
+
+<p class="ed-kicker">导读</p>
 
 ## 这份教程适合谁
 
@@ -76,7 +59,9 @@ features:
 
 </section>
 
-<section class="home-section">
+<section class="home-section ed-section">
+
+<p class="ed-kicker">路径</p>
 
 ## 三条推荐学习路径
 
@@ -102,7 +87,9 @@ features:
 
 </section>
 
-<section class="home-section home-split">
+<section class="home-section home-split ed-section">
+
+<p class="ed-kicker">入口</p>
 
 <div>
 
@@ -122,7 +109,9 @@ Codex 的能力会出现在 App、CLI、Cloud、IDE、ChatGPT 和集成生态里
 
 </section>
 
-<section class="home-section">
+<section class="home-section ed-section">
+
+<p class="ed-kicker">方法</p>
 
 ## 把一次任务做成闭环
 
@@ -155,7 +144,9 @@ Codex 的能力会出现在 App、CLI、Cloud、IDE、ChatGPT 和集成生态里
 
 </section>
 
-<section class="home-section">
+<section class="home-section ed-section">
+
+<p class="ed-kicker">案例</p>
 
 ## 精选实战场景
 
@@ -182,7 +173,9 @@ Codex 的能力会出现在 App、CLI、Cloud、IDE、ChatGPT 和集成生态里
 
 </section>
 
-<section class="home-section home-split home-split-reverse">
+<section class="home-section home-split home-split-reverse ed-section">
+
+<p class="ed-kicker">工程</p>
 
 <div class="mw-diagram"><img class="home-visual" src="/images/codex-safety-layers.svg" alt="Codex 安全边界分层" loading="lazy" /></div>
 
@@ -203,7 +196,9 @@ Codex 的能力会出现在 App、CLI、Cloud、IDE、ChatGPT 和集成生态里
 
 </section>
 
-<section class="home-section home-final">
+<section class="home-section home-final ed-section">
+
+<p class="ed-kicker">开始</p>
 
 ## 建议从这里开始
 
@@ -215,9 +210,7 @@ Codex 的能力会出现在 App、CLI、Cloud、IDE、ChatGPT 和集成生态里
   <a href="https://mrwhale.ai/docs/cli-codex" rel="noopener noreferrer">主站接入文档</a>
 </div>
 
-::: tip 最后核对
-基础资料最后核对日期：2026-05-27。涉及功能、价格、可用性和安全策略时，请优先以 OpenAI 官方资料为准。
-:::
+<p class="ed-footnote">基础资料最后核对：2026-05-27。涉及功能、价格、可用性与安全策略，请以 OpenAI 官方资料为准。教程正文基于 CodexGuide（MIT），由 MrWhale 编排呈现。</p>
 
 </section>
 
